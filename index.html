@@ -15,34 +15,33 @@
 </head>
 <body>
 
-<!-- ==================== NAVIGATION ==================== -->
-<nav id="navbar" role="navigation" aria-label="Main Navigation">
-  <div class="container nav-inner">
-    <a href="#hero" class="nav-logo" aria-label="MCMC Home">
-      <img src="logo_clear.png" alt="MCMC Logo" />
-      <div class="nav-logo-text">
-        <strong>Miri City Medical Centre</strong>
-        <span>Est. 2004 · Miri, Sarawak</span>
-      </div>
-    </a>
-    <ul class="nav-links" role="list">
+<!-- ==================== FIXED TOP-LEFT LOGO ==================== -->
+<a href="#hero" class="site-logo" aria-label="MCMC Home">
+  <img src="logo_clear.png" alt="Miri City Medical Centre Logo" />
+</a>
+
+<!-- ==================== FLOATING BOTTOM NAVIGATION ==================== -->
+<nav id="floatnav" role="navigation" aria-label="Main Navigation">
+  <div class="floatnav-pill">
+    <!-- Desktop Links -->
+    <ul class="floatnav-links" role="list">
       <li><a href="#specializations">Services</a></li>
       <li><a href="#doctors">Specialists</a></li>
       <li><a href="#packages">Packages</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li>
-        <a href="tel:+60855475555" class="btn-aande" id="nav-aande-btn" aria-label="Call Accident and Emergency">
-          <span class="btn-icon">🚨</span> Call A&amp;E Now
-        </a>
-      </li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+    <!-- CTA Button -->
+    <a href="tel:+60855475555" class="floatnav-aande" id="nav-aande-btn" aria-label="Call Accident and Emergency">
+      <span aria-hidden="true">🚨</span> Call A&amp;E Now
+    </a>
+    <!-- Mobile hamburger toggle -->
+    <button class="floatnav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- Mobile Nav -->
+<!-- Mobile Nav Drawer (slides up from bottom nav) -->
 <div class="nav-mobile" id="navMobile" role="navigation" aria-label="Mobile Navigation">
   <a href="#specializations" class="nav-mobile-link">Services</a>
   <a href="#doctors" class="nav-mobile-link">Specialists</a>

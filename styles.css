@@ -33,17 +33,43 @@
 
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --nav-height: 72px;
+  --floatnav-height: 64px;
+  --floatnav-bottom: 32px;
 }
 
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; margin: 0; padding: 0; }
 body {
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--cream);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Fixed Site Logo (top-left, over hero) ─── */
+.site-logo {
+  position: fixed;
+  top: 28px;
+  left: 48px;
+  z-index: 1100;
+  display: block;
+  line-height: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  /* subtle drop shadow so logo reads over any hero image */
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.35));
+}
+.site-logo img {
+  height: 72px;
+  width: auto;
+  display: block;
+}
+.site-logo:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -79,78 +105,134 @@ section { padding: 80px 0; }
 .section-header.center .section-subtitle { margin: 0 auto; }
 
 /* =========================
-   NAVIGATION
+   FLOATING BOTTOM NAVIGATION
    ========================= */
-#navbar {
+#floatnav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  bottom: var(--floatnav-bottom);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
-}
-#navbar.scrolled {
-  background: rgba(250, 248, 245, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom-color: var(--border);
-  box-shadow: var(--shadow-sm);
+  pointer-events: none; /* let clicks pass through the invisible wrapper */
 }
 
-/* Nav text is white over hero, ink once scrolled */
-.nav-logo-text strong { color: #ffffff; transition: color var(--transition); }
-.nav-logo-text span   { color: rgba(255,255,255,0.72); transition: color var(--transition); }
-#navbar.scrolled .nav-logo-text strong { color: var(--ink); }
-#navbar.scrolled .nav-logo-text span   { color: var(--ink-light); }
+.floatnav-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 8px 32px rgba(26, 35, 50, 0.18),
+    0 2px 8px rgba(26, 35, 50, 0.10),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  pointer-events: all;
+  white-space: nowrap;
+}
 
-.nav-links a { color: rgba(255,255,255,0.88); }
-.nav-links a:hover { color: #ffffff; }
-#navbar.scrolled .nav-links a { color: var(--ink-light); }
-#navbar.scrolled .nav-links a:hover { color: var(--teal); }
-.nav-inner {
+/* Logo inside pill */
+.floatnav-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  flex-shrink: 0;
+  margin-right: 4px;
 }
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
+.floatnav-logo img {
+  height: 38px;
+  width: auto;
+  display: block;
 }
-.nav-logo img { height: 48px; width: auto; }
-.nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.nav-logo-text strong { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
-.nav-logo-text span { font-size: 0.7rem; color: var(--ink-light); letter-spacing: 0.02em; }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
-.nav-links a {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--ink-light);
-  transition: color var(--transition);
-  position: relative;
-}
-.nav-links a::after {
+/* Divider after logo */
+.floatnav-logo::after {
   content: '';
-  position: absolute;
-  bottom: -3px; left: 0;
-  width: 0; height: 2px;
-  background: var(--teal);
-  border-radius: 2px;
-  transition: width var(--transition);
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: rgba(26, 35, 50, 0.15);
+  margin-left: 12px;
 }
-.nav-links a:hover { color: var(--teal); }
-.nav-links a:hover::after { width: 100%; }
 
+/* Nav links */
+.floatnav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.floatnav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 7px 13px;
+  border-radius: 100px;
+  transition: background var(--transition), color var(--transition);
+  text-decoration: none;
+  display: block;
+}
+.floatnav-links a:hover {
+  background: rgba(13, 148, 136, 0.1);
+  color: var(--teal);
+}
+.floatnav-links a.active {
+  background: rgba(13, 148, 136, 0.12);
+  color: var(--teal);
+}
+
+/* Call A&E button inside pill */
+.floatnav-aande {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--red);
+  color: #ffffff !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 100px;
+  margin-left: 4px;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  animation: pulse-red 2.5s infinite;
+  flex-shrink: 0;
+}
+.floatnav-aande:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(229,62,62,0.35);
+  animation: none;
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(229,62,62,0); }
+  50% { box-shadow: 0 0 0 6px rgba(229,62,62,0.18); }
+}
+
+/* Hamburger toggle — hidden on desktop */
+.floatnav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-left: 2px;
+  flex-shrink: 0;
+}
+.floatnav-toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* btn-aande (mobile drawer reuse) */
 .btn-aande {
   display: inline-flex;
   align-items: center;
@@ -162,66 +244,45 @@ section { padding: 80px 0; }
   padding: 10px 20px;
   border-radius: 100px;
   transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-  animation: pulse-red 2.5s infinite;
 }
 .btn-aande:hover {
   background: var(--red-dark);
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(229,62,62,0.35);
-  animation: none;
-}
-.btn-aande::after { display: none !important; }
-.btn-aande .btn-icon { font-size: 1rem; }
-
-@keyframes pulse-red {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(229,62,62,0); }
-  50% { box-shadow: 0 0 0 6px rgba(229,62,62,0.18); }
 }
 
-/* Hamburger */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  padding: 4px;
-  cursor: pointer;
-}
-.nav-toggle span {
-  display: block;
-  width: 24px; height: 2px;
-  background: #ffffff;
-  border-radius: 2px;
-  transition: var(--transition);
-}
-#navbar.scrolled .nav-toggle span { background: var(--ink); }
-
-/* Mobile Nav */
+/* Mobile Nav Drawer — slides up from above the floating pill */
 .nav-mobile {
   display: none;
   position: fixed;
-  top: var(--nav-height);
-  left: 0; right: 0;
-  background: var(--cream);
-  border-bottom: 1px solid var(--border);
-  padding: 20px 24px;
+  bottom: calc(var(--floatnav-bottom) + var(--floatnav-height) + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(360px, calc(100vw - 32px));
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
   z-index: 999;
   flex-direction: column;
   gap: 4px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 32px rgba(26,35,50,0.18);
 }
 .nav-mobile.open { display: flex; }
 .nav-mobile a {
   display: block;
-  padding: 12px 0;
-  font-size: 1rem;
+  padding: 11px 12px;
+  font-size: 0.97rem;
   font-weight: 500;
   color: var(--ink);
-  border-bottom: 1px solid var(--border);
-  transition: color var(--transition);
+  border-radius: var(--radius-md);
+  transition: background var(--transition), color var(--transition);
+  text-decoration: none;
 }
-.nav-mobile a:last-child { border-bottom: none; }
-.nav-mobile a:hover { color: var(--teal); }
-.nav-mobile .btn-aande { margin-top: 12px; justify-content: center; animation: none; }
+.nav-mobile a:hover { background: var(--teal-glow); color: var(--teal); }
+.nav-mobile .btn-aande { margin-top: 8px; justify-content: center; }
 
 /* =========================
    HERO CAROUSEL
@@ -229,7 +290,8 @@ section { padding: 80px 0; }
 #hero {
   position: relative;
   width: 100%;
-  margin-top: 0; /* extends to top edge — nav overlays it */
+  margin-top: 0; /* hero starts at the very top of the viewport */
+  padding: 0; /* override the global section padding to kill the top white gap */
 }
 
 /* Container */
@@ -320,7 +382,8 @@ section { padding: 80px 0; }
   max-width: 620px;
   padding-left: max(28px, calc((100vw - 1180px) / 2));
   padding-right: 24px;
-  padding-top: calc(var(--nav-height) + 20px); /* push content below the transparent nav */
+  padding-top: 80px; /* breathing room from top edge */
+  padding-bottom: calc(var(--floatnav-height) + var(--floatnav-bottom) + 32px); /* avoid overlap with floating nav */
 
   /* Entrance animation reset — driven by JS class */
   opacity: 0;
@@ -506,7 +569,7 @@ section { padding: 80px 0; }
 @media (max-width: 768px) {
   .carousel-container { height: clamp(480px, 92vw, 640px); }
   .slide-headline { font-size: clamp(1.55rem, 6vw, 2.1rem); }
-  .slide-content { padding-left: 20px; padding-right: 20px; max-width: 100%; padding-top: calc(var(--nav-height) + 12px); }
+  .slide-content { padding-left: 20px; padding-right: 20px; max-width: 100%; padding-top: 60px; }
   .slide-sub { max-width: 100%; }
   .slide-ctas { flex-direction: column; gap: 10px; }
   .slide-btn { justify-content: center; }
@@ -1137,10 +1200,40 @@ section { padding: 80px 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* ── Floating Nav — Mobile ── */
 @media (max-width: 768px) {
   section { padding: 60px 0; }
-  .nav-links { display: none; }
-  .nav-toggle { display: flex; }
+
+  /* Pill expands to nearly full width on mobile */
+  #floatnav {
+    bottom: 16px;
+    width: calc(100vw - 32px);
+    left: 16px;
+    right: 16px;
+    transform: none;
+  }
+  .floatnav-pill {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 14px;
+    gap: 6px;
+  }
+  /* Hide desktop links and A&E button text — show hamburger */
+  .floatnav-links { display: none; }
+  .floatnav-aande { font-size: 0;
+    padding: 10px 12px;
+  }
+  .floatnav-aande span { font-size: 1.2rem; }
+  .floatnav-toggle { display: flex; }
+
+  /* Mobile nav drawer aligned to pill width */
+  .nav-mobile {
+    bottom: calc(16px + var(--floatnav-height) + 10px);
+    left: 16px;
+    right: 16px;
+    width: auto;
+    transform: none;
+  }
 
   .spec-grid { grid-template-columns: 1fr; }
   .glance-grid { grid-template-columns: 1fr; }
@@ -1154,9 +1247,9 @@ section { padding: 80px 0; }
   .hero-stats { gap: 20px; }
   .hero-title { font-size: 2rem; }
 
-  .mobile-emergency { display: flex; }
-  /* Add padding to prevent content hidden behind floating button */
-  #contact { padding-bottom: 100px; }
+  /* Ensure last sections don't hide content behind floating pill */
+  #contact { padding-bottom: 120px; }
+  #footer  { padding-bottom: 96px; }
 }
 
 @media (max-width: 480px) {

@@ -134,44 +134,40 @@
 })();
 
 
-// ── Sticky Navbar ──────────────────────────────────────────
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
 
-
-// ── Mobile Nav Toggle ──────────────────────────────────────
+// ── Floating Nav — Mobile Toggle ───────────────────────────
 const navToggle = document.getElementById('navToggle');
 const navMobile = document.getElementById('navMobile');
 
-navToggle.addEventListener('click', () => {
-  const isOpen = navMobile.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen);
-  // Animate hamburger → X
-  const spans = navToggle.querySelectorAll('span');
-  if (isOpen) {
-    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-  } else {
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '';
-    spans[2].style.transform = '';
-  }
-});
-
-// Close mobile nav when a link is clicked
-navMobile.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMobile.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+if (navToggle && navMobile) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMobile.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+    // Animate hamburger → X
     const spans = navToggle.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '';
-    spans[2].style.transform = '';
+    if (isOpen) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
   });
-});
+
+  // Close mobile drawer when a link is clicked
+  navMobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMobile.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      const spans = navToggle.querySelectorAll('span');
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    });
+  });
+}
 
 // ── Scroll Reveal (IntersectionObserver) ───────────────────
 const revealObserver = new IntersectionObserver((entries) => {
@@ -359,17 +355,17 @@ function showToast(message) {
   }, 4000);
 }
 
-// ── Smooth Active Nav Link Highlighting ────────────────────
+// ── Active Floating Nav Link Highlighting ──────────────────
 const sections = document.querySelectorAll('section[id]');
-const navLinkEls = document.querySelectorAll('.nav-links a[href^="#"]');
+const floatNavLinks = document.querySelectorAll('.floatnav-links a[href^="#"]');
 
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      navLinkEls.forEach(link => {
-        link.style.color = '';
+      floatNavLinks.forEach(link => {
+        link.classList.remove('active');
         if (link.getAttribute('href') === `#${entry.target.id}`) {
-          link.style.color = 'var(--teal)';
+          link.classList.add('active');
         }
       });
     }
