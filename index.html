@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miri City Medical Centre (MCMC) — Expert Medical Care in Miri</title>
+  <meta name="description" content="Miri City Medical Centre (MCMC) offers 24/7 emergency care, specialist consultations, maternity services, advanced diagnostics, and home physiotherapy in Miri, Sarawak." />
+  <meta name="keywords" content="MCMC, Miri City Medical Centre, hospital Miri, paediatric Miri, emergency care Miri, health screening, O&G Miri" />
+  <meta property="og:title" content="Miri City Medical Centre — Expert Care You Can Trust" />
+  <meta property="og:description" content="From 24-hour emergency services to specialist paediatric care, MCMC is dedicated to your family's health in Miri." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="MCMC Home">
+      <img src="logo_clear.png" alt="MCMC Logo" />
+      <div class="nav-logo-text">
+        <strong>Miri City Medical Centre</strong>
+        <span>Est. 2004 · Miri, Sarawak</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#specializations">Services</a></li>
+      <li><a href="#doctors">Specialists</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="tel:+60855475555" class="btn-aande" id="nav-aande-btn" aria-label="Call Accident and Emergency">
+          <span class="btn-icon">🚨</span> Call A&amp;E Now
+        </a>
+      </li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav-mobile" id="navMobile" role="navigation" aria-label="Mobile Navigation">
+  <a href="#specializations" class="nav-mobile-link">Services</a>
+  <a href="#doctors" class="nav-mobile-link">Specialists</a>
+  <a href="#packages" class="nav-mobile-link">Packages</a>
+  <a href="#dental" class="nav-mobile-link">Dental</a>
+  <a href="#contact" class="nav-mobile-link">Contact</a>
+  <a href="tel:+60855475555" class="btn-aande">🚨 Call A&amp;E Now</a>
+</div>
+
+<!-- ==================== HERO CAROUSEL ==================== -->
+<section id="hero" aria-label="Featured announcements" aria-roledescription="carousel">
+
+  <div class="carousel-container" id="heroCarousel">
+
+    <!-- ── Track ── -->
+    <div class="carousel-track" id="carouselTrack" aria-live="polite">
+
+      <!-- SLIDE 1 — Welcome -->
+      <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4"
+           style="background-image: url('slide1.png');">
+        <div class="slide-overlay slide-overlay--dark"></div>
+        <div class="slide-content">
+          <span class="slide-label">Welcome to MCMC</span>
+          <h1 class="slide-headline" id="hero-heading">Your Trusted<br/>Health Partner<br/>in Miri.</h1>
+          <p class="slide-sub">Compassionate care, advanced diagnostics, and 24/7 support for you and your family.</p>
+          <div class="slide-ctas">
+            <a href="#doctors" class="slide-btn slide-btn--primary">Meet Our Doctors</a>
+            <a href="#specializations" class="slide-btn slide-btn--ghost">View Our Services →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 — Blood Donation -->
+      <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4"
+           style="background-image: url('slide2.png');">
+        <div class="slide-overlay slide-overlay--red"></div>
+        <div class="slide-content">
+          <span class="slide-label slide-label--event">📅 Upcoming Event</span>
+          <h2 class="slide-headline">Be a Lifesaver:<br/>Join Our Blood<br/>Donation Drive.</h2>
+          <p class="slide-sub">
+            <span class="slide-detail">🗓 Date: Saturday, 29 March 2026</span>
+            <span class="slide-detail">🕐 Time: 9:00 AM – 4:00 PM</span>
+            <span class="slide-detail">📍 Location: MCMC Lobby, Ground Floor</span>
+          </p>
+          <div class="slide-ctas">
+            <a href="https://wa.me/60855475555?text=I%20would%20like%20to%20register%20interest%20for%20the%20MCMC%20Blood%20Donation%20Drive." class="slide-btn slide-btn--primary" target="_blank" rel="noopener noreferrer">Register Your Interest</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 — Women's Health -->
+      <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4"
+           style="background-image: url('slide3.png');">
+        <div class="slide-overlay slide-overlay--rose"></div>
+        <div class="slide-content">
+          <span class="slide-label slide-label--awareness">🎗 Awareness Campaign</span>
+          <h2 class="slide-headline">Women's Health:<br/>Breast Cancer<br/>Awareness.</h2>
+          <p class="slide-sub">Free screening information and consultations available throughout this month at MCMC Women's Health Clinic.</p>
+          <div class="slide-ctas">
+            <a href="#specializations" class="slide-btn slide-btn--primary">Learn More</a>
+            <a href="https://wa.me/60855475555?text=I%20would%20like%20to%20enquire%20about%20the%20Breast%20Cancer%20Awareness%20campaign%20at%20MCMC." class="slide-btn slide-btn--ghost" target="_blank" rel="noopener noreferrer">Enquire via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 — Cardiac Screening Promo -->
+      <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4"
+           style="background-image: url('slide4.png');">
+        <div class="slide-overlay slide-overlay--teal"></div>
+        <div class="slide-content">
+          <span class="slide-label slide-label--promo">⭐ Special Promotion</span>
+          <h2 class="slide-headline">2026 Health &amp;<br/>Cardiac Screening<br/>Packages.</h2>
+          <p class="slide-sub">
+            <span class="slide-detail">📦 Comprehensive cardiac &amp; executive health packages</span>
+            <span class="slide-detail">📅 Special rates valid until 30 June 2026</span>
+          </p>
+          <div class="slide-ctas">
+            <a href="#packages" class="slide-btn slide-btn--primary">View Packages</a>
+            <a href="https://wa.me/60855475555?text=I%20am%20interested%20in%20the%202026%20Cardiac%20Screening%20Package." class="slide-btn slide-btn--ghost" target="_blank" rel="noopener noreferrer">Enquire via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /track -->
+
+    <!-- ── Arrow Controls ── -->
+    <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <!-- ── Pagination Dots ── -->
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide navigation">
+      <button class="carousel-dot active" role="tab" aria-selected="true"  aria-label="Go to slide 1"></button>
+      <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Go to slide 2"></button>
+      <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Go to slide 3"></button>
+      <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Go to slide 4"></button>
+    </div>
+
+    <!-- ── Progress Bar ── -->
+    <div class="carousel-progress" aria-hidden="true">
+      <div class="carousel-progress-bar" id="carouselProgress"></div>
+    </div>
+
+  </div><!-- /carousel-container -->
+
+</section>
+
+<!-- ==================== AT A GLANCE ==================== -->
+<section id="glance" aria-label="Key Statistics">
+  <div class="container">
+    <div class="glance-grid">
+      <div class="glance-item reveal">
+        <div class="glance-number"><em>20</em>+</div>
+        <div class="glance-label">Years of Service in Miri</div>
+      </div>
+      <div class="glance-item reveal reveal-delay-1">
+        <div class="glance-number"><em>15</em>+</div>
+        <div class="glance-label">Resident Specialists</div>
+      </div>
+      <div class="glance-item reveal reveal-delay-2">
+        <div class="glance-number"><em>24</em>/7</div>
+        <div class="glance-label">Emergency Care — Always Open</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SPECIALIZATIONS ==================== -->
+<section id="specializations" aria-labelledby="spec-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Specializations</span>
+      <h2 class="section-title" id="spec-heading">Comprehensive Care for Every Stage of Life</h2>
+      <p class="section-subtitle">From your child's first checkup to advanced diagnostic imaging, our multidisciplinary team is here for you.</p>
+    </div>
+    <div class="spec-grid">
+
+      <div class="spec-card reveal" id="spec-paed">
+        <div class="spec-icon"><span class="icon">👶</span></div>
+        <h3>Paediatric Excellence</h3>
+        <p>Dedicated care for infants, children, and adolescents. Our experienced paediatricians provide comprehensive wellness checks, vaccinations, and acute care. We also run a special <strong>Night Clinic</strong> so your child's health never waits.</p>
+        <div class="spec-badge">🌙 Night Clinic: Daily until 11:00 PM</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-1" id="spec-womens">
+        <div class="spec-icon"><span class="icon">🌸</span></div>
+        <h3>Women's Health</h3>
+        <p>End-to-end maternity and gynaecological care. Our O&amp;G specialists guide you from pre-conception through delivery in our fully-equipped delivery suites, and into postnatal recovery — all in one caring environment.</p>
+        <div class="spec-badge">🤱 Maternity · Delivery Suites · O&amp;G</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-2" id="spec-diag">
+        <div class="spec-icon"><span class="icon">🔬</span></div>
+        <h3>Advanced Diagnostics</h3>
+        <p>State-of-the-art diagnostic capabilities under one roof. From high-resolution MRI and CT imaging to endoscopy and comprehensive lab services, we provide accurate results to fast-track your care pathway.</p>
+        <div class="spec-badge">🧬 MRI · Endoscopy · Laboratory</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-3" id="spec-physio">
+        <div class="spec-icon"><span class="icon">🏡</span></div>
+        <h3>Home Physiotherapy</h3>
+        <p>Our signature mobile recovery service brings expert physiotherapy directly to your home. Ideal for post-surgery rehabilitation, stroke recovery, or elderly patients — professional care, on your terms.</p>
+        <div class="spec-badge">🚗 We Come to You · Citywide Coverage</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DENTAL SPOTLIGHT ==================== -->
+<section id="dental" aria-labelledby="dental-heading">
+  <div class="container">
+    <div class="dental-inner">
+      <div class="dental-visual reveal" aria-hidden="true">
+        <div class="dental-illustration">🦷</div>
+        <div class="dental-tag">✨ NEW — Now Open</div>
+      </div>
+      <div class="dental-content">
+        <span class="section-label">New Services</span>
+        <h2 class="section-title" id="dental-heading">Introducing the MCMC Dental Centre</h2>
+        <p style="color:var(--ink-light); margin-bottom:28px; font-size:0.97rem; line-height:1.7;">
+          We are proud to announce the opening of our dedicated Dental Wing — bringing the same standard of excellence you expect from MCMC to your oral healthcare. Modern facilities, experienced dentists, and a calm, patient-first environment.
+        </p>
+        <div class="dental-services">
+          <div class="dental-service-item reveal">
+            <div class="d-icon">🔍</div>
+            <div class="d-text">
+              <strong>Comprehensive Dental Examination</strong>
+              <span>Full oral health assessment &amp; digital X-rays</span>
+            </div>
+          </div>
+          <div class="dental-service-item reveal reveal-delay-1">
+            <div class="d-icon">✨</div>
+            <div class="d-text">
+              <strong>Scaling &amp; Teeth Whitening</strong>
+              <span>Professional cleaning and cosmetic brightening</span>
+            </div>
+          </div>
+          <div class="dental-service-item reveal reveal-delay-2">
+            <div class="d-icon">🦷</div>
+            <div class="d-text">
+              <strong>Fillings, Crowns &amp; Bridges</strong>
+              <span>Restorative dentistry using premium materials</span>
+            </div>
+          </div>
+          <div class="dental-service-item reveal reveal-delay-3">
+            <div class="d-icon">😁</div>
+            <div class="d-text">
+              <strong>Orthodontics &amp; Braces</strong>
+              <span>Traditional &amp; clear aligner options available</span>
+            </div>
+          </div>
+          <div class="dental-service-item reveal reveal-delay-4">
+            <div class="d-icon">🏥</div>
+            <div class="d-text">
+              <strong>Oral Surgery &amp; Extractions</strong>
+              <span>Safe, comfortable extractions &amp; minor oral surgery</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:28px;">
+          <a href="https://wa.me/60855475555?text=I%20am%20interested%20in%20booking%20a%20dental%20appointment%20at%20MCMC%20Dental%20Centre." class="btn-primary" id="dental-book-btn" target="_blank" rel="noopener noreferrer">
+            💬 Book Dental Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HEALTH PACKAGES ==================== -->
+<section id="packages" aria-labelledby="packages-heading">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Health Screening</span>
+      <h2 class="section-title" id="packages-heading">Choose Your Screening Package</h2>
+      <p class="section-subtitle">Preventive care is the best care. Our tailored health screening packages help you stay ahead of your health.</p>
+    </div>
+    <div class="packages-table-wrapper reveal">
+      <table class="packages-table" role="table" aria-label="Health Screening Package Comparison">
+        <thead>
+          <tr>
+            <th scope="col">Included Tests &amp; Services</th>
+            <th scope="col">Executive Package</th>
+            <th scope="col" class="featured-col">
+              <span class="most-popular-badge">★ Most Popular</span>
+              Cardiac Package
+            </th>
+            <th scope="col">Pre-Marital Package</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full Blood Count (FBC)</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Kidney &amp; Liver Function</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Lipid Profile (Cholesterol)</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="cross">—</span></td>
+          </tr>
+          <tr>
+            <td>Blood Glucose / HbA1c</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>ECG (Heart Tracing)</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="cross">—</span></td>
+          </tr>
+          <tr>
+            <td>Cardiac Stress Test (Treadmill)</td>
+            <td><span class="cross">—</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="cross">—</span></td>
+          </tr>
+          <tr>
+            <td>Echocardiogram</td>
+            <td><span class="cross">—</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="cross">—</span></td>
+          </tr>
+          <tr>
+            <td>Chest X-Ray</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Urine Analysis</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>HIV / Hepatitis B &amp; C Screening</td>
+            <td><span class="cross">—</span></td>
+            <td class="featured-col"><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>STI Screening Panel</td>
+            <td><span class="cross">—</span></td>
+            <td class="featured-col"><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Blood Group Typing</td>
+            <td><span class="cross">—</span></td>
+            <td class="featured-col"><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Doctor Consultation &amp; Report</td>
+            <td><span class="check">✓</span></td>
+            <td class="featured-col"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong>Starting from</strong></td>
+            <td><strong style="color:var(--ink); font-size:1rem;">RM 380</strong></td>
+            <td class="featured-col"><strong style="color:var(--teal); font-size:1rem;">RM 680</strong></td>
+            <td><strong style="color:var(--ink); font-size:1rem;">RM 320</strong></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="https://wa.me/60855475555?text=I%20am%20interested%20in%20the%20Executive%20Health%20Screening%20Package." class="btn-secondary" style="font-size:0.82rem; padding:10px 18px;" target="_blank" rel="noopener noreferrer">Enquire</a>
+            </td>
+            <td class="featured-col">
+              <a href="https://wa.me/60855475555?text=I%20am%20interested%20in%20the%20Cardiac%20Health%20Screening%20Package." class="btn-primary" style="font-size:0.82rem; padding:10px 18px;" target="_blank" rel="noopener noreferrer">Enquire</a>
+            </td>
+            <td>
+              <a href="https://wa.me/60855475555?text=I%20am%20interested%20in%20the%20Pre-Marital%20Health%20Screening%20Package." class="btn-secondary" style="font-size:0.82rem; padding:10px 18px;" target="_blank" rel="noopener noreferrer">Enquire</a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p style="text-align:center; font-size:0.8rem; color:var(--ink-light); margin-top:18px;">
+      * Prices are indicative. Contact us for a personalised quote. Corporate &amp; group rates available.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== FIND YOUR DOCTOR ==================== -->
+<section id="doctors" aria-labelledby="doctors-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Specialists</span>
+      <h2 class="section-title" id="doctors-heading">Find Your Doctor</h2>
+      <p class="section-subtitle">Browse our panel of experienced consultants and specialists, each committed to patient-centred care.</p>
+    </div>
+    <div class="doctor-search-wrapper">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="doctorSearch" placeholder="Search by name or specialization…" aria-label="Search doctors" />
+    </div>
+    <div class="doctors-grid" id="doctorsGrid" role="list">
+
+      <div class="doctor-card reveal" data-name="Dr. Lim Wei Ming" data-spec="Paediatrics" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👨‍⚕️</div>
+        <h4>Dr. Lim Wei Ming</h4>
+        <span class="doctor-spec">Paediatrics</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-1" data-name="Dr. Sarah Abdullah" data-spec="Obstetrics & Gynaecology" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👩‍⚕️</div>
+        <h4>Dr. Sarah Abdullah</h4>
+        <span class="doctor-spec">Obstetrics &amp; Gynaecology</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-2" data-name="Dr. Tan Boon Seng" data-spec="Cardiology" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👨‍⚕️</div>
+        <h4>Dr. Tan Boon Seng</h4>
+        <span class="doctor-spec">Cardiology</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-3" data-name="Dr. Nora Hassan" data-spec="Internal Medicine" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👩‍⚕️</div>
+        <h4>Dr. Nora Hassan</h4>
+        <span class="doctor-spec">Internal Medicine</span>
+      </div>
+
+      <div class="doctor-card reveal" data-name="Dr. James Kuek" data-spec="Orthopaedics & Surgery" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👨‍⚕️</div>
+        <h4>Dr. James Kuek</h4>
+        <span class="doctor-spec">Orthopaedics &amp; Surgery</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-1" data-name="Dr. Priya Ramasamy" data-spec="Dermatology" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👩‍⚕️</div>
+        <h4>Dr. Priya Ramasamy</h4>
+        <span class="doctor-spec">Dermatology</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-2" data-name="Dr. Wong Kai Xin" data-spec="Gastroenterology" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👩‍⚕️</div>
+        <h4>Dr. Wong Kai Xin</h4>
+        <span class="doctor-spec">Gastroenterology</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-3" data-name="Dr. Muhammad Azri" data-spec="Radiology" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👨‍⚕️</div>
+        <h4>Dr. Muhammad Azri</h4>
+        <span class="doctor-spec">Radiology</span>
+      </div>
+
+      <div class="doctor-card reveal" data-name="Dr. Emily Chong" data-spec="Physiotherapy & Rehabilitation" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👩‍⚕️</div>
+        <h4>Dr. Emily Chong</h4>
+        <span class="doctor-spec">Physiotherapy &amp; Rehabilitation</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-1" data-name="Dr. Reuben Ting" data-spec="Dental Surgery" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👨‍⚕️</div>
+        <h4>Dr. Reuben Ting</h4>
+        <span class="doctor-spec">Dental Surgery</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-2" data-name="Dr. Fatimah Othman" data-spec="Paediatrics" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👩‍⚕️</div>
+        <h4>Dr. Fatimah Othman</h4>
+        <span class="doctor-spec">Paediatrics</span>
+      </div>
+
+      <div class="doctor-card reveal reveal-delay-3" data-name="Dr. Alan Sia" data-spec="ENT (Ear, Nose & Throat)" role="listitem">
+        <div class="doctor-avatar" aria-hidden="true">👨‍⚕️</div>
+        <h4>Dr. Alan Sia</h4>
+        <span class="doctor-spec">ENT (Ear, Nose &amp; Throat)</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PATIENT CONVENIENCE ==================== -->
+<section id="convenience" aria-labelledby="convenience-heading">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Patient Information</span>
+      <h2 class="section-title" id="convenience-heading">Patient Convenience</h2>
+      <p class="section-subtitle">Everything you need to know before your visit — insurance coverage, room options, and more.</p>
+    </div>
+    <div class="accordion" role="list">
+
+      <!-- Insurance -->
+      <div class="accordion-item" id="acc-insurance" role="listitem">
+        <div class="accordion-header" role="button" aria-expanded="false" aria-controls="acc-insurance-body" tabindex="0">
+          <div class="accordion-header-left">
+            <div class="accordion-header-icon" aria-hidden="true">🛡️</div>
+            <div>
+              <h3>Insurance &amp; Panel Listing</h3>
+              <p>Accepted insurers &amp; corporate panels</p>
+            </div>
+          </div>
+          <span class="accordion-chevron" aria-hidden="true">⌄</span>
+        </div>
+        <div class="accordion-body" id="acc-insurance-body">
+          <div class="accordion-content">
+            <p style="font-size:0.88rem; margin-bottom:16px; color:var(--ink-light);">We accept a wide range of insurance providers and corporate panels. Please bring your card and a referral letter if required.</p>
+            <div class="insurance-grid">
+              <span class="panel-tag">Great Eastern</span>
+              <span class="panel-tag">AIA</span>
+              <span class="panel-tag">Prudential</span>
+              <span class="panel-tag">Etiqa</span>
+              <span class="panel-tag">Allianz</span>
+              <span class="panel-tag">ING / Manulife</span>
+              <span class="panel-tag">TakafulMalaysia</span>
+              <span class="panel-tag">Zurich</span>
+              <span class="panel-tag">AmMetLife</span>
+              <span class="panel-tag">Pacific Cross</span>
+              <span class="panel-tag">BSIG</span>
+              <span class="panel-tag">MAA Takaful</span>
+              <span class="panel-tag">SOCSO / PERKESO</span>
+              <span class="panel-tag">Mediklim</span>
+              <span class="panel-tag">Plus many more…</span>
+            </div>
+            <p style="font-size:0.78rem; margin-top:14px; color:var(--ink-light);">Not sure if your insurance is accepted? <a href="tel:+60855475555" style="color:var(--teal);">Call us</a> to verify before your visit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Rates -->
+      <div class="accordion-item" id="acc-rooms" role="listitem">
+        <div class="accordion-header" role="button" aria-expanded="false" aria-controls="acc-rooms-body" tabindex="0">
+          <div class="accordion-header-left">
+            <div class="accordion-header-icon" aria-hidden="true">🛏️</div>
+            <div>
+              <h3>Room Rates &amp; Ward Types</h3>
+              <p>Inpatient accommodation options</p>
+            </div>
+          </div>
+          <span class="accordion-chevron" aria-hidden="true">⌄</span>
+        </div>
+        <div class="accordion-body" id="acc-rooms-body">
+          <div class="accordion-content">
+            <p style="font-size:0.88rem; margin-bottom:16px; color:var(--ink-light);">All rooms include air-conditioning, direct nursing call system, and meals. Rates are per night and subject to change.</p>
+            <table class="room-table" aria-label="Room rates">
+              <thead>
+                <tr>
+                  <th>Room Type</th>
+                  <th>Occupancy</th>
+                  <th>Features</th>
+                  <th>Rate/Night</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Standard Ward</td>
+                  <td>4-Bed Bay</td>
+                  <td>Shared bathroom, curtain privacy</td>
+                  <td>From RM 80</td>
+                </tr>
+                <tr>
+                  <td>Twin-Share Room</td>
+                  <td>2-Bed Room</td>
+                  <td>Semi-private, shared bathroom</td>
+                  <td>From RM 150</td>
+                </tr>
+                <tr>
+                  <td>Single Room</td>
+                  <td>1 Patient</td>
+                  <td>Private bathroom, TV, sofa</td>
+                  <td>From RM 250</td>
+                </tr>
+                <tr>
+                  <td>VIP Suite</td>
+                  <td>1 Patient + Companion</td>
+                  <td>En-suite, lounge area, premium meals</td>
+                  <td>From RM 480</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="font-size:0.78rem; margin-top:12px; color:var(--ink-light);">Rooms are subject to availability. Contact admissions for reservations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visiting Hours -->
+      <div class="accordion-item" id="acc-visiting" role="listitem">
+        <div class="accordion-header" role="button" aria-expanded="false" aria-controls="acc-visiting-body" tabindex="0">
+          <div class="accordion-header-left">
+            <div class="accordion-header-icon" aria-hidden="true">🕐</div>
+            <div>
+              <h3>Clinic Hours &amp; Visiting Times</h3>
+              <p>General hours &amp; special clinics</p>
+            </div>
+          </div>
+          <span class="accordion-chevron" aria-hidden="true">⌄</span>
+        </div>
+        <div class="accordion-body" id="acc-visiting-body">
+          <div class="accordion-content">
+            <table class="room-table" aria-label="Clinic hours">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Days</th>
+                  <th>Hours</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Accident &amp; Emergency (A&amp;E)</td>
+                  <td>Daily</td>
+                  <td>24 Hours</td>
+                </tr>
+                <tr>
+                  <td>General Outpatient</td>
+                  <td>Mon – Sat</td>
+                  <td>8:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Specialist Clinics</td>
+                  <td>Mon – Sat</td>
+                  <td>8:30 AM – 4:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Paediatric Night Clinic</td>
+                  <td>Daily</td>
+                  <td>6:00 PM – 11:00 PM</td>
+                </tr>
+                <tr>
+                  <td>MCMC Dental Centre</td>
+                  <td>Mon – Sat</td>
+                  <td>9:00 AM – 6:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Visitor Hours (Wards)</td>
+                  <td>Daily</td>
+                  <td>12:00 PM – 2:00 PM &amp; 5:00 PM – 8:30 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT & LOCATION ==================== -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title" id="contact-heading">Contact &amp; Location</h2>
+      <p class="section-subtitle">We're here whenever you need us. Find us easily or send us a message.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="map-wrapper reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.6167893213167!2d113.99280491525714!3d4.399197396570258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fba23e3ad5b1a7%3A0x3a5b12af9e2793e4!2sMiri%20City%20Medical%20Centre!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="MCMC Location Map"
+            aria-label="Google Maps showing MCMC location in Miri">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contact-info reveal reveal-delay-1">
+        <h3>Miri City Medical Centre</h3>
+        <p>Serving the people of Miri with expert, compassionate care since 2004.</p>
+
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <span class="c-icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <span>Jalan Bulan Sabit, Miri, 98000 Sarawak, Malaysia</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="c-icon">📞</span>
+            <div>
+              <strong>General Line</strong>
+              <a href="tel:+60855475555">+60 85-547 5555</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="c-icon">🚨</span>
+            <div>
+              <strong>A&amp;E / Emergency</strong>
+              <a href="tel:+60855475555">+60 85-547 5555 (24/7)</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="c-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@mcmc.com.my">info@mcmc.com.my</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/60855475555?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20MCMC%20services." class="whatsapp-btn" id="contact-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat with Us on WhatsApp
+        </a>
+
+        <form class="contact-form" id="contactForm" novalidate aria-label="Send us a message">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="e.g. Ahmad bin Ali" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Phone Number</label>
+              <input type="tel" id="cf-phone" name="phone" placeholder="e.g. 011-123 4567" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-service">Service of Interest</label>
+            <select id="cf-service" name="service">
+              <option value="">— Select a department —</option>
+              <option>Paediatrics / Night Clinic</option>
+              <option>Obstetrics &amp; Gynaecology</option>
+              <option>Cardiology</option>
+              <option>Internal Medicine</option>
+              <option>Orthopaedics &amp; Surgery</option>
+              <option>Diagnostics (MRI, Lab, Endoscopy)</option>
+              <option>Home Physiotherapy</option>
+              <option>MCMC Dental Centre</option>
+              <option>Health Screening Package</option>
+              <option>Accident &amp; Emergency</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us how we can help…"></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit" id="contact-form-submit">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="MCMC Home">
+          <img src="logo_clear.png" alt="MCMC Logo" style="height:44px; filter:brightness(1.2);" />
+          <div class="nav-logo-text">
+            <strong>Miri City Medical Centre</strong>
+            <span>Est. 2004 · Miri, Sarawak</span>
+          </div>
+        </a>
+        <p>Committed to delivering expert, compassionate, and accessible healthcare to every patient in Miri and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#specializations">Paediatrics</a></li>
+          <li><a href="#specializations">Women's Health</a></li>
+          <li><a href="#specializations">Diagnostics</a></li>
+          <li><a href="#specializations">Home Physiotherapy</a></li>
+          <li><a href="#dental">Dental Centre</a></li>
+          <li><a href="#packages">Health Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#doctors">Find a Doctor</a></li>
+          <li><a href="#convenience">Insurance &amp; Panels</a></li>
+          <li><a href="#convenience">Room Rates</a></li>
+          <li><a href="#convenience">Visiting Hours</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="tel:+60855475555">A&amp;E: +60 85-547 5555</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Miri City Medical Centre (MCMC). All rights reserved.</p>
+      <p style="color:rgba(255,255,255,0.25); font-size:0.75rem;">Miri, Sarawak, Malaysia · Reg. No. 200xxxxxxx</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MOBILE EMERGENCY BUTTON ==================== -->
+<a href="tel:+60855475555" class="mobile-emergency" id="mobile-emergency-btn" aria-label="Call Emergency Line">
+  <span aria-hidden="true">🚨</span> Call Emergency
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
